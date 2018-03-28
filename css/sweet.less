@@ -241,6 +241,20 @@
 
  }
 
+ .wrap_desc{
+ 	&:hover >.ingredients_desc{
+		left: 100%;
+		opacity:0.98;
+		transition: 0.3s opacity;
+
+    }
+    &:hover >.ingredients_button{
+    	background-color: @yellow;
+		opacity: 1;
+		transition: 0.3s;
+	}
+ }
+
 .ingredients_button{
 	margin: 0 auto;
 	margin-bottom: 20px; 
@@ -250,19 +264,6 @@
 	background-color: white;
 	opacity: 0.2;
 	cursor: pointer;
-	&:hover{
-		background-color: @yellow;
-		opacity: 1;
-		transition: 0.3s;
-
-	}
-	&:hover >.ingredients_desc,.ingredients_desc:hover{
-		left: 100%;
-		opacity:0.98;
-		transition: 0.3s opacity;
-
-    }
-
 
 }
 .ingredients{
@@ -275,7 +276,7 @@
 	background-color: white;
 	opacity: 0;
 	width: 400px;
-	margin-top: -170px;
+	margin-top: -155px;
 	height: 285px;
 	border-radius: 25px;
 	color: @grey;
@@ -301,6 +302,18 @@
 .svg_icon{
 	width: 15px;
 	padding-right: 10px;
+}
+.time_wrap{
+	margin-top: 50px;
+}
+.time_text{
+	color: #fff;
+	opacity: 0.5;
+}
+.time{
+	.malina;
+	font-size: 24px;
+	color: #fff;
 }
 
 .slider_center{
