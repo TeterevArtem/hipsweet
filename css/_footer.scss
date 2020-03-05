@@ -1,0 +1,98 @@
+.footer{
+	@extend %content_width; 
+	color: $light-grey;
+	min-height: 50px
+}
+.footer_logo{
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+}
+.footer_img-wrap{
+	display: inline-block;
+	vertical-align: middle;
+	width: 70px;
+	height: 55px;
+}
+.footer_img{
+	width: 100%;
+}
+.footer_name{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	@extend %malina;
+	color: $yellow;
+	font-size: 1.8em;
+	margin: 0;
+
+}
+.copy{
+	margin-left: 70px;
+	margin-right: 70px;
+}
+.socials{
+	display: inline-block;
+	vertical-align: middle;
+}
+.socials_list{
+	list-style: none;
+	padding: 0;
+	margin-left: 115px;
+}
+.socials_items{
+	display: inline-block;
+	margin-right: 25px;
+	text-align: center;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover{
+
+		.socials_link{
+			&-fb{
+				@include sprite($fb-hover);
+			}
+			&-tw{
+				@include sprite($tw-hover);
+			}
+			&-inst{
+				@include sprite($inst-hover);
+			}
+			&-vk{
+				@include sprite($vk-hover);
+			}
+			&-ok{
+				@include sprite($ok-hover);
+			}
+		}
+	}
+}
+.socials_link{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	text-decoration: none;
+	
+
+	&-fb{
+		@include sprite($fb);
+	}
+	&-tw{
+		@include sprite($tw);
+	}
+	&-inst{
+		@include sprite($inst);
+	}
+	&-vk{
+		@include sprite($vk);
+	}
+	&-ok{
+		@include sprite($ok);
+	}
+	
+}
+
+

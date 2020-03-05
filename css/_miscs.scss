@@ -1,0 +1,26 @@
+%clearfix{
+	&:before, &:after{
+		content: "";
+		display: block;
+	}
+	&:after{
+		clear: both;
+	}
+
+}
+%malina{
+	font-family: 'Malina';
+}
+
+%content_width{
+	max-width: 1250px;
+	margin: auto;
+}
+
+%mariad{
+	font-family: 'MyriadPro-Regular';
+}
+@function rem($target) {
+ 	$result : $target / 16 + 0rem;
+	@return $result;
+ }

@@ -1,0 +1,79 @@
+.cook_container{
+	background: radial-gradient(circle farthest-side at center left, $light-grey, #fff);
+}
+.cook{
+	@extend %content_width;	
+	min-height: 1040px;
+}
+.cook_left{
+	float: left;
+	width: 60%;
+	padding-top: 225px;
+}
+.cook_title{
+	@extend %malina;
+	font-size: 72px;
+	color: $dark-blue;
+	margin: 0;
+}
+.cook_desc{
+	font-family: sans-serif;
+	font-weight: medium;
+	width: 400px;
+	color: $grey-text;
+}
+.cook_right{
+	float: right;
+	width: 40%;
+	padding-top: 87px
+}
+.cook_icons{	
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 100px;
+}
+.cook_item{
+	display: inline-block;
+	width: 170px;
+	margin-right: 90px;
+	&:last-child{
+		margin-right: 0;
+	}
+	
+}
+.pic_block{
+	background-color: #c0c1c5;
+	border-radius: 50%;	
+	margin-bottom: 20px;
+	width: 105px;
+	height: 105px;
+	position: relative;
+}
+
+.pic_text{
+	@extend %malina;
+	color: $grey-text;
+	font-size: 18px;
+}
+.img_block{
+	position: absolute;
+	
+	&-hat{
+		@include sprite($hat);
+		left:-15%;
+		top: -15%;
+	}
+	&-leaf{
+		@include sprite($leaf);
+		top: 5%;
+		left: -34%;		
+	}
+	&-heart{
+		@include sprite($heart);
+		top: -10%;
+		left: -17%;
+	}
+}
+
+

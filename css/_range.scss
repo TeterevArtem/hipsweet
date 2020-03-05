@@ -1,0 +1,87 @@
+.range_container{
+	background: url(../img/paterns/pattern.jpg) repeat;
+}
+.range{
+ 	@extend %content_width;
+ 	min-height: 1550px;	
+ }
+.yellow_wrap{
+	margin: auto;
+	text-align: center;
+	width: 830px;
+	color: #883213;
+}
+.yellow_title{
+	margin-top: 0;
+	margin-bottom: 50px;
+	padding-top: 145px;
+	@extend %malina;
+	color: $dark-blue;
+	font-size: 72px;
+}
+.list_range{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 0;
+}
+.range_item{
+	display: inline-block;
+	text-align: center;
+	margin-top: 85px;
+	width: 25%;
+	color: #b46247;
+	font-size: 16px;
+
+}
+.sweet_pic{
+	margin-top: 85px;
+	width: 208px;
+	height: 208px;
+	background-color: rgba(229, 159, 16, 0.6);
+	border-radius: 50%;
+	margin: auto;
+	position: relative;
+
+}
+.sweet_block{
+	position: absolute;
+
+	&-cake{
+		@include sprite($cake);
+		top: -44%;
+	}
+	&-biscuit{
+		@include sprite($biscuit);
+		top: 8%;
+	}
+	&-donut{
+		@include sprite($donut);
+		left: -4%;		
+	}
+	&-roll{
+		@include sprite($roll);
+	}
+	&-marshmallows{
+		@include sprite($marshmallows);
+		top: 7%;
+	}
+	&-chocolate{
+		@include sprite($chocolate);
+	}
+	&-marshcake{
+		@include sprite($marshcake);
+		left: 7%;
+	}
+	&-candy{
+		@include sprite($candy);
+		left: -5%;
+		top: 8%;
+	}
+}
+.sweet_name{
+	@extend %malina;
+	color: $dark-blue;
+	font-size: 36px;
+}

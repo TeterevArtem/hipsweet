@@ -1,0 +1,50 @@
+.questions_container{
+	background-image: url('../img/paterns/cake_pettern.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;	
+	font-family: sans-serif;
+}
+.questions{
+	@extend %content_width; 
+	color: white;
+	min-height: 830px;
+}
+.qestions_header{
+
+	text-align: center;
+	@extend %malina;
+}
+.questions_title{
+	padding-top: 100px;
+	margin-top: 0;
+	font-size: 48px;
+}
+.questions_block{
+	margin-left: 100px;
+}
+.questions_items{
+	font-size: 24px;
+	line-height: 2;
+}
+.question_title{
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	border-bottom: 2px dashed white;
+}
+.question_dist{
+	display: none;
+	font-size: 16px;
+	line-height: 1.2;
+}
+.active{
+	color: $yellow;
+	.question_title{
+		color: $yellow;
+		border-bottom: none;
+	}
+	.question_dist{
+		color: white;
+	}
+}

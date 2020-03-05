@@ -1,0 +1,263 @@
+.team_container{
+	background: radial-gradient(circle, #fff ,$light-grey+40%);
+	min-height: rem(1700);
+}
+
+.team{
+	@extend %content_width;
+}
+.team_head{
+	@extend %clearfix;
+	padding-top: rem(100);
+
+}
+
+.team_title{
+	display: inline-block;
+	width: rem(370);
+	color: $dark-blue;
+	font-size: rem(72);
+	@extend %malina;
+	float: left;
+
+}
+.team_tabs{
+	float: left;
+	margin-top: rem(70);
+	list-style: none;
+	padding: 0;	
+	margin-left: rem(85);
+}
+.tabs_item{
+	display: inline-block;
+	width: rem(220);
+	height: rem(155);
+	vertical-align: top;
+	
+
+	&.active{
+		.tabs_link{
+		color: white;
+	    background-color: $brown;
+		border-radius: 20px;
+		padding:15px 25px ;
+		position: relative;
+			&:before{
+			position: absolute;
+			content: '';
+			top: 100%;
+			left: 50%;
+			margin-left: -20px;
+			border-top: 10px solid $brown;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			}
+		}
+		
+		.cheef_name{
+		color: $yellow;
+		}
+	}
+}
+.tabs_link{
+	position: relative;
+	padding:15px 40px;
+	position: relative;
+	cursor: pointer;
+	color: $grey-text;
+}
+
+.cheef_name{
+	@extend %malina;
+	color: $dark-blue;
+	font-size: 36px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-decoration: none;
+
+}
+.tabs_list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tabs_content{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.cheef_biography{
+	margin-top: 150px;
+	color: $dark-grey;
+	min-height: 470px;
+}
+.biography_left{
+	display: inline-block;
+	width: 320px;
+	vertical-align: top;
+	position: relative;
+
+	&:after{
+		position: absolute;
+		content: '';
+		width: 50px;
+		height: 50px;
+		@include sprite($quote);
+		bottom: 100%;
+		left: 100%;
+
+	}
+}
+.biography_right{
+	display: inline-block;
+	width: 395px;
+	margin-left: 530px;
+}
+.chocolad_block{
+	position: relative;
+	margin: auto;
+	margin-top: 125px;
+	width: rem(845);
+	height: rem(408);
+	background-image: url('../img/paterns/chocolad_patern.png');
+	background-size: cover;
+	border-radius: 20px;
+
+	&:before{
+		position: absolute;
+		content: '';
+		width: 500px;
+		height: 600px;
+		left: 50%;
+		background-image: url('../img/backgrounds/Cheef.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		bottom: 100%;
+		margin-left: -285px;
+	}
+}
+.chocolad_left{
+	float: left;
+	width: 50%;
+	text-align: center;
+	@extend %malina;
+	color: white;
+
+}
+.form_title{
+	font-size: 64px;
+	margin-top: 115px;
+}
+.chocolad_right{
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+
+}
+.chocolad_form{
+	margin-left:65px;
+	padding-top: 45px; 
+}
+.inputs{
+	display: block;
+	width: rem(300);
+	line-height: 3;
+	margin-top: 20px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+	color: white;
+}
+.telephone{
+	line-height: 3;
+	width: 300px;
+	letter-spacing: 5px;
+	margin-top: 20px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+	color: white;
+	
+}
+.label_checkbox{
+	position: relative;
+	display: block;
+	margin-top: 50px;
+}
+.checkbox{
+	position: absolute;
+	left: -9999px;
+}
+.fake_checkbox{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 20px;
+	text-align: center;
+	background-color: white;
+	border: 1px solid #2b0c08+ligther 10%;
+	border-radius: 2px;	
+	position: relative;
+	cursor: pointer;
+	
+}
+.checkbox_link{
+	position: absolute;
+	display: inline-block;
+	top: -43%;
+	left: -4%;
+	
+}
+.fake_link{
+	display: inline-block;
+
+}
+.checkbox:checked+ .fake_checkbox{
+	.checkbox_link{
+		@include sprite($checked);
+	}
+
+
+}
+.checkbox_text{
+	color: white;
+}
+.label_button{
+	display: block;
+}
+.submit{
+	position: absolute;
+	left: -9999px;
+}
+	
+.fake_submit{
+	position: absolute;
+	display: inline-block;
+	width: 95px;
+	height: 95px;
+	background-color: $yellow;
+	border-radius: 50%;
+	text-align: center;
+	left: 100%;
+	top: 100%;
+	cursor: pointer;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.fake_link{
+	margin-top: 20px;
+	margin-left: 5px;
+	display: inline-block;
+	@include sprite($arrow);
+}
+
+.submit:hover+ .fake_submit{
+	background-color: $brown;
+	.fake_link{
+		@include sprite($arrow-hover);
+	}
+}

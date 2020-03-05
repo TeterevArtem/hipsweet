@@ -1,0 +1,24 @@
+$red: 			#bb2b31;
+$light-red:		#d43a3c;
+$yellow: 		#fca211;
+$dark-yellow: 	#641a00;
+$grey: 			#575757;
+$dark-grey: 	#656464;
+$dark-blue: 	#2b2f5f;
+$light-grey:	#c9c8c7;
+$grey-text: 	#747474;
+$brown:			#893213;
+
+/*styles*/
+@import "../img/sprites/sprite";
+@import "../bower/normalize-scss/_normalize";
+@import "fonts/malina-fonts/_stylesheet";
+@import "adjastments";
+@import "miscs";
+@import "cook";
+@import "sweet";
+@import "range";
+@import "team";
+@import "questions";
+@import "map";
+@import "footer";

@@ -1,0 +1,397 @@
+.sweet_container{
+	background: radial-gradient(circle farthest-side at bottom left, $light-red, $red);
+
+}
+.sweet{
+	@extend %content_width;	
+	position: relative;
+	min-height: 1040px;
+}
+.header{
+	padding-top: 20px;
+	@extend %clearfix;
+}
+.header_left{
+	float: left;
+	width: 40%;
+
+}
+.header_img{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.header_logo{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+.logo_title{
+	margin: 0;
+	font-size: 48px;
+	color: $yellow;
+	@extend %malina;
+}
+
+.header_right{
+	float: left;
+	width: 60%;
+}
+.header_menu{
+	display: inline-block;
+}
+.menu_list{
+	list-style: none;
+	margin-top: 38px;
+	
+}
+.menu_item{
+	display: inline-block;
+	margin-right: 75px;
+	position: relative;
+	padding-bottom: 30px;
+	
+}
+.menu_item:hover>.menu_link{
+	color: $yellow;
+
+	&:before{
+		margin-top: -2px;
+		border-color: $yellow;
+	}
+	&:after{
+		margin-top: 1px;
+
+	}
+}
+
+.menu_link{
+	text-decoration: none;
+	color: white;
+	position: relative;
+
+	&:before{
+		position: absolute;
+		left: 100%;
+		top: 50%;
+		margin-top: -5px;
+		margin-left: 15px;
+		content: '';
+		border: 5px solid white;
+		border-bottom: none;
+		border-left: none;
+		-webkit-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	
+	&:after{
+		position: absolute;
+		left: 100%;
+		top: 50%;
+		margin-top: -7px;
+		margin-left: 15px;
+		content: '';
+		border: 5px solid $red;
+		border-bottom: none;
+		border-left: none;
+		-webkit-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	
+
+}
+.menu_link-ndrop{
+	&:before{
+		display: none;
+	}
+	&:after{
+		display: none;
+	}
+}
+
+.comand_list{
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: -9999%;
+	margin-left: -110px;
+	background-color: white;
+	width: 228px;
+	padding: 30px 0;
+	border-radius: 25px;
+	line-height: 3;
+	opacity: 0.98;
+	z-index: 2;
+	
+
+	&:before{
+		content: "";
+		border-bottom: 15px solid white;
+		border-right: 30px solid transparent;
+		border-left: 30px solid transparent;		
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -30px;
+		
+	}
+	
+
+	
+}
+.menu_item:hover>.comand_list{
+	left: 50%;
+	opacity: 1;
+	transition: 0.3s opacity;
+}
+
+.comand_link{
+	padding-left: 60px;
+	color: $grey;
+	text-decoration: none;
+	position: relative;
+	&:hover{
+		color: $dark-grey;
+		font-weight: bold;
+		transition: 0.2s;
+	}
+	&:before{
+		position: absolute;
+		right:9999%;
+		margin-top: 12px;
+		content: "";
+		border-left: 10px solid $yellow;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		opacity: 0;
+	}
+	&:hover::before{
+		right:94%;
+		opacity: 1;
+		transition: 0.2s opacity;
+
+	}
+
+
+}
+
+.header_icons{
+	display: inline-block;
+}
+
+.icons_list{
+	list-style: none;
+	padding: 0;
+}
+
+.icons_item{
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-align: center;
+	cursor: pointer;
+	.icons_link-room{
+		@include sprite($room);
+	}
+	.icons_link-search{
+		@include sprite($search);
+	}
+	&:first-child{
+		margin-right: 25px;
+	}
+	&:hover{
+			background-color: $yellow;
+			opacity: 1;
+			transition: 0.3s;
+
+			.icons_link-room{
+				@include sprite($room-hover);
+			}
+			.icons_link-search{
+				@include sprite($search-hover);
+			}
+    }
+}
+.icons_link{
+	margin-top: 10px;	
+	text-decoration: none;
+	display: inline-block;
+	
+}
+/*content*/
+.slider{
+	@extend %clearfix;
+	margin-top: 70px;
+	position: relative;
+	z-index: 1;	
+}
+
+.bg_text{
+	position: absolute;
+	top: 50%;
+	margin-top: -20em;
+	width: 100%;
+	text-align: center;
+	z-index: -1;
+}
+
+.slider_bg{
+	color: white;
+	opacity: 0.2;
+	@extend %malina;
+	font-size: 11em;
+	
+
+}
+
+.slider_left{
+	position: relative;
+	float: left;
+    width: 10%;
+    text-align: center;
+    margin-top:300px;
+    margin-right: 20px;
+
+ }
+
+ .wrap_desc{
+ 	&:hover >.ingredients_desc{
+		left: 100%;
+		opacity:0.98;
+		transition: 0.3s opacity;
+
+    }
+    &:hover >.ingredients_button{
+    	background-color: $yellow;
+		opacity: 1;
+		transition: 0.3s;
+		.ingredients_link{
+			@include sprite($whick-hover);
+		}
+	}
+ }
+
+.ingredients_button{
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 20px; 
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	.ingredients_link{
+		@include sprite($whisk);
+		position: relative;
+	}
+
+}
+.ingredients_link{
+	margin-top: 11px;
+	text-decoration: none;
+	display: inline-block;
+	
+	
+}
+.ingredients{
+	color: white;
+}
+
+.ingredients_desc{
+	position: absolute;
+	left: -9999%;
+	background-color: white;
+	opacity: 0;
+	width: 400px;
+	margin-top: -155px;
+	height: 285px;
+	border-radius: 25px;
+	color: $grey;
+	&:before{
+		content: "";
+		border-bottom: 30px solid transparent;
+		border-right: 15px solid white;
+		border-top: 30px solid transparent;		
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		margin-top: -60px;
+	}
+}
+
+.table_desc{
+	margin: 0 auto;
+	margin-top: 55px;
+	text-align: left;
+	line-height: 2;
+	border-spacing: 50px 0;
+}
+.svg_icon{
+	width: 15px;
+	padding-right: 10px;
+}
+.weight{
+	padding-left: 50px;
+}
+.time_wrap{
+	margin-top: 80px;
+}
+.time_text{
+	color: #fff;
+	opacity: 0.5;
+	font-size: 13px;
+}
+.time{
+	@extend %malina;
+	font-size: 24px;
+	color: #fff;
+}
+
+.slider_center{
+	float: left;
+	width: 50%;
+	text-align: right;
+	margin-right: 20px;
+}
+
+.article_right{
+	margin-top: 60px;
+	float: left;
+	color: white;
+	width: 32%;
+	font-size: 16px;
+}
+
+.article_name{
+	@extend %malina;
+	font-size: 4.5em;
+}
+
+.price{
+	@extend %malina;
+	font-size: 4.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.order_button{
+	display: inline-block;
+	vertical-align: middle;
+	color: $red;
+	text-decoration: none;
+	background-color: $yellow;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-top: 8px;
+
+	&:hover{
+		background-color: $dark-yellow;
+		color: $yellow;
+
+	}
+}
